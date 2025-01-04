@@ -40,9 +40,8 @@ h2 {
 
 .btn-group {
     margin-top: 20px;
-    display: flex; /* Use flexbox to position buttons next to each other */
-    justify-content: space-between; /* Distribute space between the buttons */
     position: relative;
+    height: 50px; /* Ensure the wrapper for buttons is tall enough */
 }
 
 button {
@@ -55,6 +54,7 @@ button {
     cursor: pointer;
     box-shadow: 0 2px 4px gray;
     border: none;
+    position: relative; /* This ensures buttons stay aligned within the parent */
 }
 
 button.yes-btn {
@@ -64,5 +64,8 @@ button.yes-btn {
 button.no-btn {
     background: white;
     color: #2e8b57;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
     border: 2px solid #2e8b57;
 }
